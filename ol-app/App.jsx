@@ -11,7 +11,9 @@ import Map from './components/Map';
 import { useRef } from 'react';
 
 export default function App() {
-    const zoomToGeoJSONFuncRef = useRef<() => void>();
+    const zoomToGeoJSONFuncRef = useRef();
+
+
 
     const mapPressHandler = (coordinates: [number, number]) => {
         Alert.alert(
@@ -40,7 +42,7 @@ export default function App() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: 'red',
         alignItems: 'center',
         justifyContent: 'center',
     },
